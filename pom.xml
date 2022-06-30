@@ -6,7 +6,12 @@
 
   <groupId>com.farzad</groupId>
   <artifactId>MicroServiceTest</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>customer</module>
+  </modules>
 
   <name>MicroServiceTest</name>
 
