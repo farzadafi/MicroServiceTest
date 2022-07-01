@@ -11,6 +11,7 @@
 
   <modules>
     <module>customer</module>
+      <module>expert</module>
   </modules>
 
   <name>MicroServiceTest</name>
