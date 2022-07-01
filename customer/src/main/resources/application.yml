@@ -3,4 +3,16 @@ server:
 
 spring:
   application:
-    name: customer
+      name: customer
+  datasource:
+      username: 'postgres'
+      password: 'postgres'
+      url: jdbc:postgresql://localhost:5433/postgres
+  jpa:
+   hibernate:
+      ddl-auto: update
+   properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
