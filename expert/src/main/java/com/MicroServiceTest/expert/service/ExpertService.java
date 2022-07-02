@@ -5,4 +5,5 @@ import com.MicroServiceTest.expert.model.Expert;
 
 public interface ExpertService {
     void save(Expert expert);
+    String checkCustomer(Integer customerId);
 }
