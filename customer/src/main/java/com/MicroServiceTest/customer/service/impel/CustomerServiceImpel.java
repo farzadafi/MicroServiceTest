@@ -5,6 +5,8 @@ import com.MicroServiceTest.customer.repository.CustomerRepository;
 import com.MicroServiceTest.customer.service.CustomerService;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomerServiceImpel implements CustomerService {
 
@@ -17,5 +19,10 @@ public class CustomerServiceImpel implements CustomerService {
     @Override
     public void save(Customer customer) {
         customerRepository.save(customer);
+    }
+
+    @Override
+    public Optional<Customer> checkCustomer(Integer customerId) {
+        return customerRepository.findById(customerId);
     }
 }
