@@ -32,4 +32,9 @@ public class CustomerController {
         Customer customer = customerServiceImpel.checkCustomer(customerId).orElseThrow(() -> new CustomerNotFoundException("this customer not found"));
         return "OK";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "OK";
+    }
 }
