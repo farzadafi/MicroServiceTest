@@ -12,6 +12,7 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(CustomerNotFoundException.class)
     public ResponseEntity<String> customerExceptionHandler(CustomerNotFoundException e) {
+        log.warn("This customer not found!");
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 

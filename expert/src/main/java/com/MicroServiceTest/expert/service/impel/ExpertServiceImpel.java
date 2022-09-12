@@ -24,10 +24,14 @@ public class ExpertServiceImpel implements ExpertService {
 
     @Override
     public String checkCustomer(Integer customerId) {
-        return restTemplate.getForObject(
-                "http://localhost:8080/api/customer/checkCustomer/{customerId}",
-                String.class,
-                customerId
-        );
+        try {
+            return restTemplate.getForObject(
+                    "http://localhost:8080/api/customer/checkCustomer/{customerId}",
+                    String.class,
+                    customerId
+            );
+        } catch (Exception e) {
+            return "This customer not found!";
+        }
     }
 }
